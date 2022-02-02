@@ -1,0 +1,417 @@
+@font-face {
+    font-family: Acherus Grotesque Regular;
+    src: url('Horizon Type - AcherusGrotesque-Regular.otf');
+}
+
+@font-face {
+    font-family: Cyberway Riders;
+    src: url('Cyberway Riders.otf');
+}
+
+@font-face {
+    font-family: Thunderstrike Cond;
+    src: url('thunderstrikecond.ttf');
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Acherus Grotesque Regular, sans-serif; 
+    color:white;
+    margin:0; 
+    height:100%;
+    background-color: rgb(34, 27, 34);
+    
+}
+
+/* MOBILE */
+
+#locationCircle{
+    fill:red;
+    animation: location-animation 1s infinite;
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display:flex;
+}
+
+#mapDiv{
+    background-color: black;
+}
+
+@keyframes location-animation {
+    from {
+        opacity: 0;
+        r: 6%;
+    }
+    to {
+        opacity:100;
+        r: 2%;
+    }
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+h1{
+    font-family: Thunderstrike Cond, sans-serif; 
+}
+
+    #leftcolumn .column, #rightcolumn .column{
+        display:flex;
+        
+    }
+
+    #leftcolumn .row, #rightcolumn .row{
+        flex:50%;
+        position: relative;
+    }
+
+    #header{
+        background-color: rgb(20, 20, 20);;
+    }
+
+    #header .column{
+        
+        flex:33%;
+    }
+
+    #header .row{
+        display:flex;
+        position: relative;
+        margin-bottom:1em;
+    }
+
+    .show{
+        margin-bottom: 2em !important;
+    }
+
+    #showcase{
+        height:fit-content;
+        width:100%;
+        animation: pageopenfade 0.5s;
+    }
+
+    #zombieslider{
+        height: 200px;
+        background-size: 1600px 200px;
+        background-image: url("images/zombieslider.png");
+        background-repeat: repeat-x;
+        animation: text-anim 20s infinite;
+        animation-timing-function: linear;
+      
+    }
+
+    #content{
+        width:80%;
+        text-align: center;
+        margin:2em auto;
+    }
+    
+    @keyframes text-anim{
+        0%{background-position: left;}
+        100%{background-position: right;}
+    }
+
+    @keyframes pageopenfade {
+        0%{opacity: 0;}
+        100%{opacity: 100;}
+    }
+
+    .center_container{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .center_inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #header #logo{
+        text-align: center;
+        font-size:1.5em; 
+        margin: 1em 0;   
+    }
+
+    #header-links{
+        background-color: rgb(20, 20, 20);
+        text-align: center;
+        font-size:1em;
+        position: absolute;
+        width:100%;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    #header-links a{
+        color: white;
+        padding:6px;
+        transition: color 0.3s;
+    }
+
+    .show > #header-links{
+        padding-bottom: 2em;
+    }
+
+    #header-links a:hover, #header-links a:focus{
+        color:#ff2f77 !important;
+    }
+
+    .currentpage{
+        color: #ff2f77 !important;
+    }
+
+
+    #header .socials{
+        position: absolute;
+        top: 50%;
+        right:5%;
+        transform: translateY(-50%);
+
+    }
+
+    .social{
+        width:35px;
+        vertical-align: middle;
+        padding:6px;
+        fill:white;
+        transition: fill 0.3s;  
+    }
+
+    .social:hover, .social:focus{
+        fill: #ff2f77;
+    }
+
+    #leftcolumn .social, #rightcolumn .social{
+        fill: white;
+    }
+
+    #leftcolumn .social:hover, #leftcolumn .social:focus, #rightcolumn .social:hover, #rightcolumn .social:focus{
+        fill: #ff2f77;
+    }
+
+    #contact .emaillink{
+        text-decoration: none;
+        color:white;
+        transition: color 0.3s;
+    }
+
+    #contact .emaillink:hover, #contact .emaillink:focus{
+        color:#ff2f77;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    /*LEFT COLUMN*/
+
+    #leftPageBg{
+        background-color: white;
+        background-image :linear-gradient(45deg,  rgb(12, 245, 116,0.4), rgb(58, 190, 255,0.4),rgb(239, 171, 255,0.4), rgb(236, 5, 142,0.4), rgb(255, 190, 11,0.4));
+        background-size: 300%;
+        background-position:center;
+        height:100vh;
+        min-height:550px;
+        animation: bg-animation 20s infinite alternate;
+    }
+
+    #leftcolumn #logo{
+        max-width: 500px; margin: 0; margin-bottom: 1em;
+        font-size: 40px;
+        color:white;
+    }
+
+    #leftcolumn .socials, #rightcolumn .socials, #contact .socials{
+        text-align: center;
+    }
+
+    .emaillink{
+        text-decoration: none;
+        color:white;
+        transition: color 0.3s;
+    }
+
+    .emaillink:hover, .emaillink:focus{
+        color:#ff2f77;
+    }
+
+    #leftcolumn .project{
+        text-align: center;
+        background-color: white;
+        color:white;
+        margin-bottom: 1em;
+        padding:1em;
+        width:300px;
+        transition: background-color 0.3s;
+    }
+
+    #leftcolumn .project:hover, #leftcolumn .project:focus{
+        background-color: #ff2f77;
+    }
+
+    /*RIGHT COLUMN*/
+
+    #rightPageBg{
+        background-image: url('images/texturefabrik_dust-01.png');
+        background-position:center;
+        background-size:cover; height:100vh;
+        min-height:550px;
+        
+    }
+
+    #rightcolumn #logo{
+        max-width: 300px; margin: 0; margin-bottom: 1em;
+    }
+
+    #rightcolumn #mc_embed_signup{
+        font-size: 30px;
+    }
+
+    #rightcolumn #mc-embedded-subscribe{
+        font-family: Acherus Grotesque Regular, sans-serif; 
+        background-color: white;
+        border: none;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+    }
+
+    #rightcolumn #mc-embedded-subscribe:hover, #rightcolumn #mc-embedded-subscribe:focus{
+        background-color: #ff2f77;
+    }
+
+    #rightcolumn #mc_embed_signup_scroll{
+        text-align: center; color:white; padding:1vw;
+    }
+
+    #rightcolumn #mce-FNAME, #rightcolumn #mce-EMAIL{
+            margin-top: 1vw; width:20em  ; height:2em; font-family: Acherus Grotesque Regular, sans-serif;
+    }
+
+    #rightcolumn #mce-EMAIL{
+        margin-bottom: 1vw;
+    }
+
+    #footer{
+        
+    }
+
+    .link{
+        text-decoration: none;
+        color:white;
+        transition: color 0.3s;
+        
+    }
+
+    .link:focus, .link:hover{
+        color:#ff2f77;
+    }
+
+    .faq-q::after{
+        content: " +";
+    }
+
+    .faq-c{
+        max-height: 0px;
+        overflow: hidden;
+        -webkit-transition: max-height 0.8s;
+        -moz-transition: max-height 0.8s;
+        transition: max-height 0.8s;
+    }
+
+    /*.rm-circle{
+        fill:white;
+        stroke:#ff2f77;
+        stroke-width: 0px;
+        transition: fill 0.3s, stroke-width 0.3s;
+    }
+
+    .rm-circle:focus, .rm-circle:hover{
+        stroke-width: 3px;
+    }*/
+
+    .rm-circle{
+        fill:white;
+    }
+
+    .teammate-pic{
+        width:150px;
+    }
+
+    .teammate-name{
+        margin-bottom: 0;
+    }
+
+    .teammate-role{
+        font-size: 0.8em;
+        margin-top: 0.2em;
+        margin-bottom: 2em;
+    }
+
+    #rm-text{
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+    
+    .columnkeep{
+        flex:50%;
+        position: relative;
+    }
+    .rowkeep{
+        display:flex;
+    }
+
+/* DESKTOP */
+@media only screen and (min-width: 768px){
+    .hide{
+        display:flex;
+    }
+
+    .show{
+        display:none !important;
+    }
+
+    .column{
+        flex:50%;
+        position: relative;
+    }
+
+    #header .column{
+        flex:33%;
+    }
+
+    #header .row{
+        height:auto;
+        margin-bottom:auto;
+    }
+
+    .row{
+        display:flex;
+    }
+
+    #header #logo{
+        text-align: center;
+        font-size:1.5em;    
+    }
+    #content{
+        width:66%;
+    }
+}
